@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:id="@+id/scrollLayout"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/mainDataLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Welcome"
+                            style="@style/TextAppearance.Material3.LabelLarge"/>
+                        <TextView
+                            android:id="@+id/userNameTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Username"
+                            android:maxLines="1"
+                            style="@style/TextAppearance.Material3.HeadlineSmall"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/menuBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:icon="@drawable/baseline_menu_24"
+                        app:backgroundTint="?attr/colorPrimaryContainer"
+                        app:iconTint="?attr/colorOnBackground"
+                        style="@style/Widget.Material3.Button.IconButton.Filled"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="Today"
+                    style="@style/TextAppearance.Material3.TitleMedium"/>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.CardView.Filled">
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="18dp"
+                        android:gravity="center">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/TextAppearance.Material3.LabelMedium"
+                                android:text="Exercise"/>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="bottom">
+                                <TextView
+                                    android:id="@+id/stepsTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/TextAppearance.Material3.HeadlineMedium"
+                                    android:text="2298"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/TextAppearance.Material3.LabelMedium"
+                                    android:text="Steps"/>
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="bottom">
+                                <TextView
+                                    android:id="@+id/distanceTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/TextAppearance.Material3.TitleLarge"
+                                    android:text="2.3"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/TextAppearance.Material3.LabelSmall"
+                                    android:text="Km"/>
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="70dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/running_girl_ic"
+                            android:scaleType="fitCenter"
+                            android:layout_marginEnd="8dp"
+                            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </com.google.android.material.card.MaterialCardView>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.CardView.Filled">
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="18dp"
+                        android:gravity="center">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/TextAppearance.Material3.LabelMedium"
+                                android:text="Energy expended"/>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="bottom">
+                                <TextView
+                                    android:id="@+id/energyTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/TextAppearance.Material3.HeadlineMedium"
+                                    android:text="2978"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/TextAppearance.Material3.LabelMedium"
+                                    android:text="Cal"/>
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="70dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/dumbble_girl_ic"
+                            android:scaleType="fitCenter"
+                            android:layout_marginEnd="8dp"
+                            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </com.google.android.material.card.MaterialCardView>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.CardView.Filled">
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="18dp"
+                        android:gravity="center">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/TextAppearance.Material3.LabelMedium"
+                                android:text="Weight"/>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="bottom">
+                                <TextView
+                                    android:id="@+id/weightTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/TextAppearance.Material3.HeadlineMedium"
+                                    android:text="54"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/TextAppearance.Material3.LabelMedium"
+                                    android:text="Kg"/>
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="70dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/jumpping_girl_ic"
+                            android:scaleType="fitCenter"
+                            android:layout_marginEnd="8dp"
+                            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </com.google.android.material.card.MaterialCardView>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.CardView.Filled">
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="18dp"
+                        android:gravity="center">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/TextAppearance.Material3.LabelMedium"
+                                android:text="Avg heart rate"/>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="bottom">
+                                <TextView
+                                    android:id="@+id/heartRateTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/TextAppearance.Material3.HeadlineMedium"
+                                    android:text="76"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/TextAppearance.Material3.LabelMedium"
+                                    android:text="bpm"/>
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="70dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/heart_girl_ic"
+                            android:scaleType="fitCenter"
+                            android:layout_marginEnd="8dp"
+                            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </com.google.android.material.card.MaterialCardView>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.CardView.Filled">
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="18dp"
+                        android:gravity="center">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/TextAppearance.Material3.LabelMedium"
+                                android:text="Speed"/>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="bottom">
+                                <TextView
+                                    android:id="@+id/cycleDisTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/TextAppearance.Material3.HeadlineMedium"
+                                    android:text="1.4"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/TextAppearance.Material3.LabelMedium"
+                                    android:text="m/s"/>
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="70dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/cycle_girl_ic"
+                            android:scaleType="fitCenter"
+                            android:layout_marginEnd="8dp"
+                            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </com.google.android.material.card.MaterialCardView>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="Healthy Sleep Habits"
+                    style="@style/TextAppearance.Material3.TitleMedium"/>
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    app:dividerColor="?attr/colorPrimary"
+                    android:layout_marginTop="6dp"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sleep_1"
+                    style="@style/TextAppearance.Material3.BodySmall"
+                    android:layout_marginBottom="10dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sleep_2"
+                    style="@style/TextAppearance.Material3.BodySmall"
+                    android:layout_marginBottom="10dp"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:src="@drawable/sleep_girl_ic"
+                    android:scaleType="centerInside"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="6dp"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sleep_3"
+                    style="@style/TextAppearance.Material3.BodySmall"
+                    android:layout_marginBottom="10dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sleep_4"
+                    style="@style/TextAppearance.Material3.BodySmall"
+                    android:layout_marginBottom="10dp"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="Do yoga daily"
+                    style="@style/TextAppearance.Material3.TitleMedium"/>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Space
+                        android:layout_width="16dp"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.Material3.CardView.Filled">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:srcCompat="@drawable/yoga_girl_1"
+                            android:layout_margin="12dp"/>
+                    </com.google.android.material.card.MaterialCardView>
+                    <Space
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content" />
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.Material3.CardView.Filled">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:srcCompat="@drawable/yoga_girl_2"
+                            android:layout_margin="12dp"/>
+                    </com.google.android.material.card.MaterialCardView>
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.Material3.CardView.Filled">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:srcCompat="@drawable/yoga_girl_3"
+                            android:layout_margin="12dp"/>
+                    </com.google.android.material.card.MaterialCardView>
+                    <Space
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content" />
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.Material3.CardView.Filled">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:srcCompat="@drawable/yoga_girl_4"
+                            android:layout_margin="12dp"/>
+                    </com.google.android.material.card.MaterialCardView>
+                    <Space
+                        android:layout_width="16dp"
+                        android:layout_height="wrap_content" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="26dp"/>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="26dp"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        app:srcCompat="@drawable/family_ic"
+                        android:layout_marginBottom="16dp" />
+                    <Space
+                        android:layout_width="6dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Spend time with your family ❤️"
+                        style="@style/TextAppearance.Material3.BodyLarge"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/loginLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:layout_margin="10dp"
+                android:visibility="visible">
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    style="@style/Widget.Material3.CardView.Filled">
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="86dp"
+                            android:layout_height="86dp"
+                            android:src="@drawable/face_male_ic"
+                            android:layout_marginBottom="12dp"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/loginBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:icon="@drawable/baseline_key_24"
+                            app:iconGravity="textStart"
+                            android:layout_gravity="center"
+                            android:text="Authenticate me" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mobText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="8dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginNow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Material3.Button"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+        android:text="Login"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="8dp"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signupNow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Material3.Button"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+        android:text="Create an account"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

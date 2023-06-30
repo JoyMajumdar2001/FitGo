@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "216962382574",
+    "project_id": "fitgo-e355d",
+    "storage_bucket": "fitgo-e355d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216962382574:android:724134293882df3d2fd1ff",
+        "android_client_info": {
+          "package_name": "com.qdot.fitgo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216962382574-ke4km15vrj9p19lr8173110mn99gem7e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.qdot.fitgo",
+            "certificate_hash": "217b604705642c34209bfc4151cf3cb7c4c7d4eb"
+          }
+        },
+        {
+          "client_id": "216962382574-hnhroh907ie8ngbt7hedqee6v7urq2oh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAesYfg6xMDEyg9ALfhYq1Sz9qSqgs0SGc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216962382574-hnhroh907ie8ngbt7hedqee6v7urq2oh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
